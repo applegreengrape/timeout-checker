@@ -1,4 +1,4 @@
-module wait
+module checker-api
 
 go 1.16
 

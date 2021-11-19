@@ -1,7 +1,7 @@
 builds:
   - id: darwin-amd64
     main: ./
-    binary: wait
+    binary: checker-api
     goos:
       - darwin
     goarch:
@@ -17,7 +17,7 @@ builds:
       - -s -w -X main.version={{.Version}}
   - id: linux-armhf
     main: ./
-    binary: wait
+    binary: checker-api
     goos:
       - linux
     goarch:
@@ -57,7 +57,7 @@ brews:
   -
     tap:
       owner: applegreengrape
-      name: delay-api
+      name: timeout-checker
     folder: Formula
-    homepage: https://github.com/applegreengrape/delay-api
+    homepage: https://github.com/applegreengrape/timeout-checker
     description: simple wait& response api for timeout test
