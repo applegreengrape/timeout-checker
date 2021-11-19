@@ -1,5 +1,5 @@
 # timeout-checker
-A simple wait and response api for retry& timeout test. Yes everyone loves to test retry and timeout 🤠
+A simple wait and response api to test retry& timeout. Yep! Everyone loves retry and timeout test 🤠
 
 Install via brew 
 ```
