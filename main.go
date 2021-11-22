@@ -15,7 +15,8 @@ type Wait struct {
 }
 
 func (wait *Wait) healthcheck(w http.ResponseWriter, r *http.Request) {
-	log.Println("recieved")
+	log.Printf("wait %d second", wait.time)
+	log.Println("received")
 	time.Sleep(time.Duration(wait.time) * time.Second)
 
 	w.WriteHeader(http.StatusOK)
