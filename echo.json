@@ -1,43 +1,3 @@
-# timeout-checker
-A simple wait and response api to test retry& timeout. Yep! Everyone loves retry and timeout test 🤠
-
-## Install via brew 
-```
-$ brew tap applegreengrape/timeout-checker https://github.com/applegreengrape/timeout-checker
-$ brew install timeout-checker
-```
-server side:
-```
-$ checker-api -wait 3 -port 8081
-2021/11/22 15:21:30 wait 3 second
-2021/11/22 15:21:30 received
-2021/11/22 15:21:33 returned
-2021/11/22 15:21:42 wait 3 second
-2021/11/22 15:21:42 received
-2021/11/22 15:21:45 returned
-```
-
-client side:
-```
-$ curl http://localhost:8081/healthcheck
-{"status":"up"}
-
-$ curl http://localhost:8081/healthcheck
-{"status":"up"}
-```
-
-## Customize api response
-server side:
-```
-$ go run main.go -path '/v1/api/echo' -payload echo.json
-2021/11/25 16:25:43 wait 3 second
-2021/11/25 16:25:43 received
-2021/11/25 16:25:46 returned
-```
-
-client side:
-```
-$ curl -X POST  http://localhost:8080/v1/api/echo
 {
     "_id": "619fb7e74eb6e971b55f410a",
     "index": 0,
@@ -83,5 +43,3 @@ $ curl -X POST  http://localhost:8080/v1/api/echo
     "greeting": "Hello, Jan Crane! You have 6 unread messages.",
     "favoriteFruit": "strawberry"
   }
-```
-So you should be able to customiz the api path and response
