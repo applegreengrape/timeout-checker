@@ -5,13 +5,13 @@
 class TimeoutChecker < Formula
   desc "simple wait& response api for timeout test"
   homepage "https://github.com/applegreengrape/timeout-checker"
-  version "0.0.5"
+  version "0.1.0"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/applegreengrape/timeout-checker/releases/download/v0.0.5/timeout-checker_0.0.5_darwin_amd64.zip"
-      sha256 "ea28a7946b57860ea2958980bae724bb42e2d0145528b14b9994da7d79525292"
+      url "https://github.com/applegreengrape/timeout-checker/releases/download/v0.1.0/timeout-checker_0.1.0_darwin_amd64.zip"
+      sha256 "8dc0c47e924b03598ddd397eba41dcdb87e11c557d7bbebcd65fc9208a2bb6c4"
 
       def install
         bin.install "checker-api"
