@@ -3,11 +3,14 @@ A simple wait and response api to test retry& timeout. Yep! Everyone loves retry
 
 ## Flags
 -wait: `int` set how many seconds to wait before response, default is 3 second
--port: `int` set api server port, default is 8080
--path: `string` set api path, default is "/api/echo"
--method: `string` http method, default is "POST"
--payload: `string` path to the payload json file
 
+-port: `int` set api server port, default is 8080
+
+-path: `string` set api path, default is "/api/echo"
+
+-method: `string` http method, default is "POST"
+
+-payload: `string` path to the payload json file
 
 ## Install via brew 
 ```
