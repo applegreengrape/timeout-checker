@@ -37,7 +37,7 @@ $ curl http://localhost:8081/healthcheck
 {"status":"up"}
 ```
 
-## Customize api response
+## Customize api path and response
 server side:
 ```
 $ go run main.go -path '/v1/api/echo' -payload echo.json
