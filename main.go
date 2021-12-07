@@ -13,11 +13,11 @@ import (
 )
 
 type Wait struct {
-    time int
+	time int
 }
 
 type Echo struct {
-	time int
+	time        int
 	payloadPath string
 }
 
@@ -37,11 +37,12 @@ func (echo *Echo) echo(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	jsonFile, err := os.Open(echo.payloadPath)
-    if err != nil {}
+	if err != nil {
+	}
 
 	defer jsonFile.Close()
 
-    byteValue, _ := ioutil.ReadAll(jsonFile)
+	byteValue, _ := ioutil.ReadAll(jsonFile)
 	w.Write([]byte(byteValue))
 	log.Println("returned")
 }
@@ -52,7 +53,7 @@ func main() {
 	path := flag.String("path", "/api/echo", "")
 	method := flag.String("method", "POST", "")
 	payload := flag.String("payload", "", "path to payload json file")
-	
+
 	flag.Parse()
 
 	w := &Wait{time: *wait}
